@@ -1,8 +1,10 @@
 def my_collect(array)
   i = 0
+  new_a = []
   while i < array.length
-    yield(array[i])
+    store = yield(array[i])
+    new_a.push(store)
     i += 1
   end
-  array
+  new_a
 end
